@@ -27,7 +27,7 @@ CMD ["bash"]
 
 COPY jar /var/aem
 
-RUN java -jar -Xmx1024M /var/aem/cq-quickstart-6.4.0.jar -unpack
+RUN java -XX:MaxPermSize=256m -Xmx1024M -jar /var/aem/cq-quickstart-6.4.0.jar
 
 COPY install /var/aem/crx-quickstart/_install
 COPY init.py /var/aem/crx-quickstart/init.py
