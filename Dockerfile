@@ -27,7 +27,7 @@ CMD ["bash"]
 
 COPY jar /var/aem
 
-RUN java -jar -Xmx1024M /var/aem/cq-quickstart-6.1.0.jar -unpack
+RUN java -jar -Xmx1024M /var/aem/cq-quickstart-6.4.0.jar -unpack
 
 COPY install /var/aem/crx-quickstart/_install
 COPY init.py /var/aem/crx-quickstart/init.py
